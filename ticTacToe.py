@@ -76,8 +76,6 @@ def printTurn(nTurn):
         print 1
 
 
-printFirstMessage()
-
 def twoPlayersGame():
     printFirstMessage()
     tabBoth = [" "]*9
@@ -98,12 +96,14 @@ def twoPlayersGame():
             letter = "X"
             tabX[index] = "X"
             if isAligned(tabX):
+                graphicView(tabBoth)
                 print "Player 1 WON!!! Player 2, you're such a looser!"
                 return
         else:
             letter = "O"
             tabO[index] = "O"
             if isAligned(tabO):
+                graphicView(tabBoth)
                 print "Player 2 WON!!! Player 1, your life sucks!"
                 return
         tabBoth[index] = letter
